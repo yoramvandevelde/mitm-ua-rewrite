@@ -1,5 +1,8 @@
 FROM python:3.13-alpine
 
+# TOFIX remove stuffz we don't needs
+RUN apk add --no-cache gcc musl-dev libffi-dev openssl-dev cargo rust
+
 RUN pip install --no-cache-dir mitmproxy
 
 COPY rewrite.py /app/rewrite.py
