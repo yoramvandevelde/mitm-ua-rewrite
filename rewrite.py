@@ -7,4 +7,5 @@ BROWSER_UA = (
 )
 
 def request(flow):
+    # print(f"Rewrite UA for {flow.request.pretty_host}")
     flow.request.headers["User-Agent"] = BROWSER_UA
